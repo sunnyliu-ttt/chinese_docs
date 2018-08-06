@@ -13,6 +13,11 @@ headlessRPC是一个轻节点的提供RPC服务的无界面钱包。该钱包具
 headlessRPC默认端口为6332
 
 
+## docker
+
+sudo docker pull yiyanwannian/trustnote:allinone
+
+
 
 
 
