@@ -1,19 +1,18 @@
 首先我们清空sqlite：
 ```cmd
 $ rm trustnote_light.sqlite
-<DELL@XUDONG-DESKTOP:~/project/rust/rust-trustnote/target/debug/temp>
 ```
 
 然后与hub同步
 ```
 $ ../ttt.exe sync
+
 refresh history done
-<DELL@XUDONG-DESKTOP:~/project/rust/rust-trustnote/target/debug/temp>
 ```
 
 打印记录
 
-``
+```
 $ ../ttt.exe log
 
 #1        -1.000 MN     2018-08-14 10:09:22
@@ -27,7 +26,6 @@ $ ../ttt.exe log
 #5        -1.120 MN     2018-08-13 18:38:11
 
 #6        -3.000 MN     2018-08-13 17:40:32
-<DELL@XUDONG-DESKTOP:~/project/rust/rust-trustnote/target/debug/temp>
 ```
 
 显示第一条记录
@@ -58,6 +56,7 @@ current wallet info:
 device_address: 0XIN26WQCCWDVWWA4Y6QPSLCAUSIIEUHT
 
 wallet_public_key:
+
 xpub6DLLRkRUQaJy3uwaKXVbkY1k3xk1jh4acdBkeaiMgLDqxKmzC9JxtU43QVYsfpTT8kVS43TMWxs3sA64rhikKYS5YtroBShmHJGERGQbSk4
 
 └──wallet_id(0): NoyA6JCWejxjBdMk4pZJVdCbZqSZ/I66KePC45ddnho=
@@ -97,8 +96,8 @@ DATE  : 1534213172183
 
 ```
 $ ../ttt.exe sync
+
 refresh history done
-<DELL@XUDONG-DESKTOP:~/project/rust/rust-trustnote/target/debug/temp>
 ```
 
 打印记录：
