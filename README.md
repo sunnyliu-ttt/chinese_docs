@@ -4,6 +4,8 @@
 
 > TrustNote 是一个DAG公链，交易速度快，交易费用低。
 
+![](developers.png)
+
 ## 开发
 
 ### 源码级开发工具 headlessRPC
