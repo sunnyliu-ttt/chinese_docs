@@ -30,7 +30,7 @@ Integrating the SDK into your project manually
 /**
 * SDK entry point, include all api method.
 * 1. Api method must be called from non UI thread.
-* 2. No support for simulator.
+* 2. Simulator is not supported.
 */
 public class WalletApi
 
