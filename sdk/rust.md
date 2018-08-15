@@ -16,11 +16,95 @@ https://github.com/trustnote/rust-trustnote/releases/download/0.3.0/windows_ttt.
 如何测试：
 
 
-linux 系统
+ubuntu 系统
 
-解压缩后，更改其权限为可执行：
+```
+wget https://github.com/trustnote/rust-trustnote/releases/download/0.3.0/ubuntu_ttt.zip
+```
+
+解压缩：
+
+```
+unzip ubuntu_ttt.zip
+```
+
+之后，更改其权限为可执行：
 
 ```
 chmod +x ttt
 ```
 
+配置
+
+```json
+{
+  "hub_url": [
+    "dev.trustnote.org:6616"
+  ],
+  "mnemonic": "select initial pet jazz alone stamp copper vault private slight rocket stock",
+  "genesis_unit": "V/NuDxzT7VFa/AqfBsAZ8suG4uj3u+l0kXOLE+nP+dU=",
+  "witnesses": [
+      "6LDM27ELDDAJBTNTVVQQYW7MWOK3F6WD",
+      "BP2NYKORMOB5SEUTFSVPF2CMSQSVEZOS",
+      "C6D4XKXDO4JAUT3BR27RM3UHKYGILR3X",
+      "CGCU5BBDWY2ZU3XKUXNGDTXDY7VXXJNJ",
+      "E45DPZHBPI7YX3CDG7HWTWBWRNGBV6C3",
+      "EPG47NW4DDKIBUFZBDVQU3KHYCCMXTDN",
+      "FF6X4KX3OOAAZUYWXDAHQJIJ5HDZLSXL",
+      "JVFHPXAA7FJEJU3TSTR5ETYVOXHOBR4H",
+      "MWJTSFCRBCV2CVT3SCDYZW2F2N3JKPIP",
+      "NJSDFSIRZT5I5YQONDNEMKXSFNJPSO6A",
+      "OALYXCMDI6ODRWMY6YO6WUPL6Q5ZBAO5",
+      "UABSDF77S6SU4FDAXWTYIODVODCAA22A"
+  ]
+}
+```
+只需要配置 mnemonic 即可。
+
+配置完 mnemonic ，执行sync以和hub同步。
+
+```
+./ttt sync
+```
+
+出现类似的提示
+```
+refresh history done
+```
+
+接下来，查看信息：
+
+```
+./ttt info
+```
+
+得到类似的信息：
+
+```
+current wallet info:
+
+device_address: 0IKB7F3DAVIB3YHKJYWWVSBC6CSK76IE7
+wallet_public_key: xpub6D9Xmp2Y9XTpZYZ5xk4cNxSQoBufvQ5SWLATBwyaSh38G6aiCrUzUGuEtMoRMPy3a3wKJ8B6obtpUvu89sBbadqah9iXLWohTZi9FWj7JML
+└──wallet_id(0): UYwIQm+PIzvY5lceD6uX+yAc86LfaC3RFobSdxGfHmk=
+   └──address(0/0): HU475BN5CEEPYL3WPLK5KA3FKXXN5NAD
+      ├── path: /m/44'/0'/0'/0/0
+      ├── pubkey: A3OTtemVlcteNZafJyXoCbE0UJ5SL74UI0cIjyJC4bCe
+      └── balance: 299.999MN
+
+```
+
+其中address 后面，是该钱包的地址。
+
+默认钱包是没有钱的，因此可以去 http://dev.trustnote.org/getTTT 领币。
+
+领完币后，再同步一次：
+
+```
+./ttt sync
+```
+
+然后继续查询信息：
+
+```
+./ttt info
+```
