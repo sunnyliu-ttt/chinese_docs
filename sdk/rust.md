@@ -146,3 +146,6 @@ DATE  : 2018-08-15 15:59:27.973
 ./ttt send -p OKLGMIWBCFITVWKZF3JASA23OMZLICSH 9.99
 ```
 
+### rust 版本的命令行钱包还可以做哪些事情？
+
+rust 版本的wallet可以放在服务器中，通过其他脚本如php、python、ruby、nodejs等调用这个rust的命令行钱包，可以制作基于web的多账户在线钱包。
