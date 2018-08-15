@@ -36,6 +36,8 @@ chmod +x ttt
 
 ### 配置
 
+在ttt所在的同级目录中，新建一个名为settings.json的文件，输入以下信息：
+
 ```json
 {
   "hub_url": [
@@ -59,7 +61,8 @@ chmod +x ttt
   ]
 }
 ```
-只需要配置 mnemonic 即可。
+
+你可以把你的助忆词放在 mnemonic 处。
 
 配置完 mnemonic ，执行sync以和hub同步。
 
