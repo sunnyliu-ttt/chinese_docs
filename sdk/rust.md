@@ -13,7 +13,7 @@ https://github.com/trustnote/rust-trustnote/releases/download/0.3.0/ubuntu_ttt.z
 https://github.com/trustnote/rust-trustnote/releases/download/0.3.0/windows_ttt.zip
 
 
-如何测试：
+如何体验：
 
 
 ubuntu 系统
@@ -34,7 +34,7 @@ unzip ubuntu_ttt.zip
 chmod +x ttt
 ```
 
-配置
+### 配置
 
 ```json
 {
@@ -63,6 +63,8 @@ chmod +x ttt
 
 配置完 mnemonic ，执行sync以和hub同步。
 
+### 同步
+
 ```
 ./ttt sync
 ```
@@ -72,7 +74,7 @@ chmod +x ttt
 refresh history done
 ```
 
-接下来，查看信息：
+### 查看信息
 
 ```
 ./ttt info
@@ -108,3 +110,36 @@ wallet_public_key: xpub6D9Xmp2Y9XTpZYZ5xk4cNxSQoBufvQ5SWLATBwyaSh38G6aiCrUzUGuEt
 ```
 ./ttt info
 ```
+
+需要注意的是，一定要保持sync的好习惯。
+
+
+### 转账
+
+可以去 http://developers.trustnote.org/fancy-address/index.html 生成一些用来转账的测试地址
+
+我使用了生产的 OKLGMIWBCFITVWKZF3JASA23OMZLICSH 地址作为转账的测试地址
+
+```
+./ttt send -p OKLGMIWBCFITVWKZF3JASA23OMZLICSH 9.99 -t hello
+```
+
+返回如下数据：
+
+```
+refresh history done
+
+FROM  : HU475BN5CEEPYL3WPLK5KA3FKXXN5NAD
+TO    : 
+      address : OKLGMIWBCFITVWKZF3JASA23OMZLICSH, amount : 9.99
+UNIT  : ly1DYqhjP/QngSCHP6t1NqumabOZQdR5bSiqzDDt7bc=
+TEXT  : hello
+DATE  : 2018-08-15 15:59:27.973
+```
+
+参数 -t hello 是在转账时上链一个备注信息。当然也可以去掉。即：
+
+```
+./ttt send -p OKLGMIWBCFITVWKZF3JASA23OMZLICSH 9.99
+```
+
