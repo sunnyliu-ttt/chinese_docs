@@ -1,4 +1,4 @@
-RUST版本的SDK
+## RUST版本的SDK
 
 其源码位于：https://github.com/trustnote/rust-trustnote/archive/0.3.0.zip
 
@@ -13,22 +13,26 @@ https://github.com/trustnote/rust-trustnote/releases/download/0.3.0/ubuntu_ttt.z
 https://github.com/trustnote/rust-trustnote/releases/download/0.3.0/windows_ttt.zip
 
 
-如何体验：
+### 体验：
 
 
-ubuntu 系统
+> 以ubuntu 系统为例子
+
+### 获取
+
+1. 下载
 
 ```
 wget https://github.com/trustnote/rust-trustnote/releases/download/0.3.0/ubuntu_ttt.zip
 ```
 
-解压缩：
+2. 解压缩：
 
 ```
 unzip ubuntu_ttt.zip
 ```
 
-之后，更改其权限为可执行：
+3. 更改其权限为可执行：
 
 ```
 chmod +x ttt
@@ -36,7 +40,7 @@ chmod +x ttt
 
 ### 配置
 
-在ttt所在的同级目录中，新建一个名为settings.json的文件，输入以下信息：
+1. 在ttt所在的同级目录中，新建一个名为settings.json的文件，输入以下信息：
 
 ```json
 {
@@ -62,9 +66,13 @@ chmod +x ttt
 }
 ```
 
+2. 替换助忆词
+
 你可以把你的助忆词放在 mnemonic 处。
 
-配置完 mnemonic ，执行sync以和hub同步。
+其余的，都不要做任何变更。
+
+配置完 mnemonic 后，执行sync以和hub同步。
 
 ### 同步
 
