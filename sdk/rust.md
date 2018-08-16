@@ -136,6 +136,28 @@ DATE  : 2018-08-15 15:59:27.973
 ./ttt send -p OKLGMIWBCFITVWKZF3JASA23OMZLICSH 9.99
 ```
 
+### 查询
+
+1. 查询余额（包括稳定和不稳定的）
+```
+./ttt balance
+```
+
+2. 查询稳定的余额
+
+```
+./ttt balance -s
+```
+
+3. 查询不稳定的余额
+```
+./ttt balance -p
+```
+
+小知识：
+
+> TrustNote没有账户体系，使用的是UTXO模型，因此假设转出100个TTT，很可能实际上是转的是150个TTT，然后需要有50个TTT返回，这样pending的可能就是50。这里可能比较难以理解，因为每次转多少回来多少与实际转账金额是没有规律可言的。
+
 ### rust 版本的命令行钱包还可以做哪些事情？
 
 rust 版本的wallet可以放在服务器中，通过其他脚本如php、python、ruby、nodejs等调用这个rust的命令行钱包，可以制作基于web的多账户在线钱包。
