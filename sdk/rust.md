@@ -38,41 +38,48 @@ unzip ubuntu_ttt.zip
 chmod +x ttt
 ```
 
-### 配置
+### 初始化
 
-1. 在ttt所在的同级目录中，新建一个名为settings.json的文件，输入以下信息：
+1. 初始化一个新钱包
+
+```
+./ttt init
+```
+
+2. 通过助记词导入钱包
+
+引号中的12个单词，就是助记词。你可以把你自己的助记词导入进来。
+
+```
+./ttt init "select initial pet jazz alone stamp copper vault private slight rocket stock"
+```
+
+如果你没有助记词，你可以通过先初始化一个新钱包，然后在同级目录中打开一个名为settings.json的文件，其中关键字mnemonic的后面，就是助记词。你还可以通过 http://developers.trustnote.org/fancy-address/index.html 获得个性化的地址，生成的地址后面有该地址的助记词。
+
+### 配置（非必须）
+
+在ttt所在的同级目录中，有一个名为settings.json的文件，打开后样子大致如下：
 
 ```json
 {
   "hub_url": [
     "dev.trustnote.org:6616"
   ],
-  "mnemonic": "select initial pet jazz alone stamp copper vault private slight rocket stock",
-  "genesis_unit": "V/NuDxzT7VFa/AqfBsAZ8suG4uj3u+l0kXOLE+nP+dU=",
-  "witnesses": [
-      "6LDM27ELDDAJBTNTVVQQYW7MWOK3F6WD",
-      "BP2NYKORMOB5SEUTFSVPF2CMSQSVEZOS",
-      "C6D4XKXDO4JAUT3BR27RM3UHKYGILR3X",
-      "CGCU5BBDWY2ZU3XKUXNGDTXDY7VXXJNJ",
-      "E45DPZHBPI7YX3CDG7HWTWBWRNGBV6C3",
-      "EPG47NW4DDKIBUFZBDVQU3KHYCCMXTDN",
-      "FF6X4KX3OOAAZUYWXDAHQJIJ5HDZLSXL",
-      "JVFHPXAA7FJEJU3TSTR5ETYVOXHOBR4H",
-      "MWJTSFCRBCV2CVT3SCDYZW2F2N3JKPIP",
-      "NJSDFSIRZT5I5YQONDNEMKXSFNJPSO6A",
-      "OALYXCMDI6ODRWMY6YO6WUPL6Q5ZBAO5",
-      "UABSDF77S6SU4FDAXWTYIODVODCAA22A"
-  ]
+  "mnemonic": "select initial pet jazz alone stamp copper vault private slight rocket stock"
 }
 ```
 
-2. 替换助忆词
+其中，hub_url是hub的地址，mnemonic是助忆词。
 
-你可以把你的助忆词放在 mnemonic 处。
 
-其余的，都不要做任何变更。
+1. 替换助忆词
 
-配置完 mnemonic 后可用info参数来查询钱包的地址、余额等。
+你可以手动更换助忆词。
+
+2. 替换hub
+
+dev.trustnote.org:6616 是开发者用的testNet的hub。如果想切换到主链上，则需要配置 hub_url 为 bob.trustnote.org
+
 
 ### 查看信息
 
