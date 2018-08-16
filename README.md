@@ -36,7 +36,7 @@ headlessRPC默认端口为633
   
   https://github.com/TrustNoteSamples/paid_reading
   
-* rust
+* [rust](/sdk/rust.md)
 
   用于x86架构的PC及开发板(x86架构的物联网主板)。
   
