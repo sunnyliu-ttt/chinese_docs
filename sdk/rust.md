@@ -1,7 +1,5 @@
 ## RUST版本的SDK
 
-其源码位于：https://github.com/trustnote/rust-trustnote/archive/0.3.0.zip
-
 目前编译好两种操作系统的可执行文件：
 
 1. ubuntu
@@ -12,11 +10,12 @@ https://github.com/trustnote/rust-trustnote/releases/download/0.3.0/ubuntu_ttt.z
 
 https://github.com/trustnote/rust-trustnote/releases/download/0.3.0/windows_ttt.zip
 
+你可以自己下载源码，编译成你目标平台的sdk。其源码位于：https://github.com/trustnote/rust-trustnote/archive/0.3.0.zip
 
-### 体验：
 
+### 说明
 
-> 以ubuntu 系统为例子
+> 本文档以 ubuntu 系统为例子
 
 ### 获取
 
@@ -26,19 +25,19 @@ https://github.com/trustnote/rust-trustnote/releases/download/0.3.0/windows_ttt.
 wget https://github.com/trustnote/rust-trustnote/releases/download/0.3.0/ubuntu_ttt.zip
 ```
 
-2. 解压缩：
+2. 解压缩
 
 ```
 unzip ubuntu_ttt.zip
 ```
 
-3. 更改其权限为可执行：
+3. 更改其权限为可执行
 
 ```
 chmod +x ttt
 ```
 
-### 初始化
+### 初始化钱包
 
 1. 初始化一个新钱包
 
@@ -167,4 +166,6 @@ DATE  : 2018-08-15 15:59:27.973
 
 ### rust 版本的命令行钱包还可以做哪些事情？
 
-rust 版本的wallet可以放在服务器中，通过其他脚本如php、python、ruby、nodejs等调用这个rust的命令行钱包，可以制作基于web的多账户在线钱包。
+在不同目录运行该sdk，都会在当前目录生成 settings.json 的文件。这意味着，你可以用过python、php、或其他脚本来构建多用户的钱包系统。你可以
+
+把该 sdk 放在服务器中，通过其他脚本如php、python、ruby、nodejs等调用这个rust的命令行钱包，提供基于web的多账户在线钱包服务。
