@@ -18,15 +18,35 @@ headlessRPC默认端口为633
 
 * python
 
-  用于服务器、PC及物联网设备
+  用于服务器、PC及物联网设备。
+  
+  使用pythonSDK开发的例子有：
+  
+  投票系统：https://github.com/TrustNoteSamples/VotingSystem
+  
+  web本地钱包：https://github.com/TrustNoteSamples/web_wallet
+  
+  花盆土壤状况上链：https://github.com/TrustNoteSamples/temp-humi
   
 * js
 
-  用于钱包，开发者构建H5页面，通过jssdk调用钱包，完成转载、查询等功能。
+  适用于通用钱包，开发者只需构建H5页面，通过jssdk调用钱包完成转载，通过回调函数处理支付成功后的业务逻辑。可广泛用于开发各种付费应用。
+  
+  jssdk例子：付费阅读
+  
+  https://github.com/TrustNoteSamples/paid_reading
   
 * rust
 
   用于x86架构的PC及开发板(x86架构的物联网主板)。
+  
+  目前支持的x86开发板有：
+  1. 野火
+  2. LattePand
+  3. UP Squared
+  4. intel Edison Breakout Board
+  5. Dev-14281 SparkFun
+  n. ......
 
 
 
