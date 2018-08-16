@@ -72,18 +72,7 @@ chmod +x ttt
 
 其余的，都不要做任何变更。
 
-配置完 mnemonic 后，执行sync以和hub同步。
-
-### 同步
-
-```
-./ttt sync
-```
-
-出现类似的提示
-```
-refresh history done
-```
+配置完 mnemonic 后可用info参数来查询钱包的地址、余额等。
 
 ### 查看信息
 
@@ -108,22 +97,15 @@ wallet_public_key: xpub6D9Xmp2Y9XTpZYZ5xk4cNxSQoBufvQ5SWLATBwyaSh38G6aiCrUzUGuEt
 
 其中address 后面，是该钱包的地址。
 
-默认钱包是没有钱的，因此可以去 http://dev.trustnote.org/getTTT 领币。
+默认钱包是没有钱的，因此可以打开 http://dev.trustnote.org/getTTT 输入钱包地址领取测试用的TTT。
 
-领完币后，再同步一次：
-
-```
-./ttt sync
-```
-
-然后继续查询信息：
+领完币后，再查询一次：
 
 ```
 ./ttt info
 ```
 
-需要注意的是，一定要保持sync的好习惯。
-
+通常3-5秒钟，有时会1-2分钟（视网络状况）就会有结果。
 
 ### 转账
 
