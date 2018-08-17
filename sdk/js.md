@@ -6,6 +6,8 @@ jssdk是专门为H5开发者准备的工具，只要会用jquery，就可以使�
 
 开发者需要在页面中引入 trustnote.js 文件。
 
+下载地址：https://github.com/TrustNoteDeveloper/jssdk
+
 ```
 <script src="/static/js/TrustNote.js"></script>
 ```
